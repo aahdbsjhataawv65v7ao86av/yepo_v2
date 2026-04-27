@@ -91,6 +91,7 @@
             padding: 70px 45px;
             border-radius: 24px;
             margin-bottom: 50px;
+            animation: fadeIn 1s ease-out;
         }
 
         #intro { background-color: var(--s5); border: 3px solid var(--s6); color: var(--s4); }
@@ -279,6 +280,47 @@
             nav { width: 94%; padding: 14px 20px; flex-wrap: wrap; gap: 10px; }
             section { padding: 50px 25px; }
         }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-3deg); }
+            75% { transform: rotate(3deg); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateX(-50%) translateY(0px); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+
+        .logo-header img {
+            animation: fadeIn 1s ease-in;
+        }
+
+        nav {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .idol-card {
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .ice-card {
+            animation: slideUp 0.8s ease-out;
+        }
+        .ice-card:hover {
+            animation: wiggle 0.6s ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -297,7 +339,7 @@
     <div class="container">
 
         <!-- INTRO -->
-        <section id="intro">
+        <section id="intro" style="animation-delay: 0.2s;">
             <h1>Welcome to YEPO</h1>
             <p style="font-size: 1.22rem;">
                 A sweet haven in Saigon where adorable dog idols and premium ice cream come together. 
@@ -309,7 +351,7 @@
         <hr>
 
         <!-- IDOLS -->
-        <section id="idols">
+        <section id="idols" style="animation-delay: 0.4s;">
             <h2>Our Idol Profiles</h2>
             <div id="idol-grid" class="idol-grid"></div>
         </section>
@@ -317,7 +359,7 @@
         <hr>
 
         <!-- MENU -->
-        <section id="menu">
+        <section id="menu" style="animation-delay: 0.6s;">
             <h2>Food & Drink Menu</h2>
 
             <!-- Ice Cream Tiers -->
@@ -333,7 +375,7 @@
         <hr>
 
         <!-- DIRECTORY -->
-        <section id="directory">
+        <section id="directory" style="animation-delay: 0.8s;">
             <h2>Directory</h2>
             <div class="directory-content">
                 <div class="info-box">
@@ -415,9 +457,10 @@
             const grid = document.getElementById('idol-grid');
             grid.innerHTML = '';
 
-            data.idol.forEach(([name, breed, gender, img]) => {
+            data.idol.forEach(([name, breed, gender, img], index) => {
                 const card = document.createElement('div');
                 card.className = 'idol-card';
+                card.style.animationDelay = `${index * 0.1}s`;
                 card.innerHTML = `
                     <img src="${img}" alt="${name}">
                     <div class="idol-info">
@@ -451,8 +494,8 @@
                             <div class="tier-price">${tier.price}</div>
                         </div>
                         <div class="ice-grid">
-                            ${items.map(([name, img]) => `
-                                <div class="ice-card">
+                            ${items.map(([name, img], index) => `
+                                <div class="ice-card" style="animation-delay: ${index * 0.1}s;">
                                     <img src="${img}" alt="${name}">
                                     <div class="ice-info">
                                         <h4>${name}</h4>
