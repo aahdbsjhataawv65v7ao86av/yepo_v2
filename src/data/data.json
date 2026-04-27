@@ -1,0 +1,47 @@
+{
+  "menu": {
+    "ice": {
+      "sig_100k": [
+        ["Ice1", "s1.jpg"],
+        ["Ice2", "s2.jpg"],
+        ["Ice3", "s3.jpg"]
+      ],
+      "pre_90k": [
+        ["Pre1", "p1.jpg"],
+        ["Pre2", "p2.jpg"],
+        ["Pre3", "p3.jpg"],
+        ["Pre4", "p4.jpg"]
+      ],
+      "cla_80k": [
+        ["Cla1", "c1.jpg"],
+        ["Cla2", "c2.jpg"],
+        ["Cla3", "c3.jpg"],
+        ["Cla4", "c4.jpg"]
+      ]
+    },
+    "drk": [
+      ["Signature Drink 1", 0.00],
+      ["Signature Drink 2", 0.00],
+      ["Signature Drink 3", 0.00],
+      ["Signature Drink 4", 0.00],
+      ["Signature Drink 5", 0.00],
+      ["Signature Drink 6", 0.00]
+    ]
+  },
+  "idol": [
+    ["Wi", "Samoyed", "M", "Wi.jpg"],
+    ["An", "Cavalier", "M", "An.jpg"],
+    ["Ti", "Corgi Pembroke", "M", "Ti.jpg"],
+    ["Vi", "Pomeranian", "F", "Vi.jpg"],
+    ["Nu", "Shiba Inu", "F", "Nu.jpg"],
+    ["Me", "Alaskan Malamute", "M", "Me.jpg"],
+    ["Ri", "Chow Chow", "F", "Ri.jpg"],
+    ["Fo", "French Bull", "M", "Fo.jpg"],
+    ["Ce", "Golden Retriever", "F", "Ce.jpg"],
+    ["Ca", "Standard Poodle", "M", "Ca.jpg"],
+    ["Le", "Border Collie", "M", "Le.jpg"],
+    ["Na", "Beagle", "F", "Na.jpg"],
+    ["Bi", "Pug", "M", "Bi.jpg"],
+    ["Va", "Bichon", "M", "Va.jpg"]
+  ]
+}

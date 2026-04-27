@@ -1,0 +1,16 @@
+/* Logo Header */
+.logo-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 110px 20px 50px;
+  background: var(--s5);
+}
+
+.logo-header img {
+  max-width: 320px;
+  width: 85%;
+  height: auto;
+  filter: drop-shadow(0 15px 25px rgba(109,91,46,0.3));
+  animation: fadeIn 1s ease-in;
+}

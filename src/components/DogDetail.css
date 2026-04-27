@@ -1,0 +1,57 @@
+/* Dog Detail Page Styles */
+.dog-detail-section {
+  background-color: var(--s5);
+  border: 3px solid var(--s6);
+  color: var(--s4);
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 70px 45px;
+  border-radius: 24px;
+  margin-bottom: 50px;
+  animation: fadeIn 1s ease-out;
+}
+
+.dog-detail-image {
+  flex: 1;
+  min-width: 280px;
+}
+
+.dog-detail-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.dog-detail-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.dog-detail-info h1 {
+  margin-top: 0;
+}
+
+.dog-detail-info p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--p1);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.back-link:hover {
+  color: var(--s6);
+}
+
+@media (max-width: 768px) {
+  .dog-detail-section {
+    flex-direction: column;
+  }
+}

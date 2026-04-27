@@ -1,0 +1,51 @@
+/* Directory */
+.directory-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.info-box {
+  flex: 1;
+  min-width: 260px;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box li {
+  margin-bottom: 18px;
+}
+
+.info-box strong {
+  display: block;
+  color: var(--s2);
+  margin-bottom: 4px;
+}
+
+/* Make phone number look nice and clickable */
+.phone-link {
+  color: var(--s2);
+  text-decoration: none;
+  font-weight: 600;
+}
+.phone-link:hover {
+  color: var(--s6);
+  text-decoration: underline;
+}
+
+.map-container {
+  flex: 1.5;
+  min-width: 300px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 4px solid var(--s3);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 360px;
+  border: none;
+}

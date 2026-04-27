@@ -1,0 +1,31 @@
+/* Floating Navigation */
+nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 620px;
+  background-color: rgba(109, 91, 46, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 16px 30px;
+  border-radius: 50px;
+  z-index: 1000;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid var(--p1);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--s2);
+  font-weight: 600;
+  font-size: 1.02rem;
+  transition: color 0.3s ease;
+}
+nav a:hover { color: var(--s6); }
+
+@media (max-width: 640px) {
+  nav { width: 94%; padding: 14px 20px; flex-wrap: wrap; gap: 10px; }
+}
